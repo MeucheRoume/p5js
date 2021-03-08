@@ -13,12 +13,22 @@ gui.add(params, "Download_Image")
 // -------------------
 //       Drawing
 // -------------------
-
+let pos = 0;
+let div;
+let div2;
 function draw() {
-    background(0)
-    ellipse(mouseX, mouseY, params.Ellipse_Size)
+    fill('black');
+    div=line(200, 200, 400, 400);
+    translate(pos, 0, 0);
+    div2=line(200, 200, 400, 400);
+    while(pos!=0){
+        div.hide();
+    }
 }
-
+function mouseWheel(event) {
+    print(event.delta);
+    pos = event.delta;
+}
 // -------------------
 //    Initialization
 // -------------------

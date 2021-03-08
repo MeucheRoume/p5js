@@ -5,9 +5,21 @@ var params = {
 };
 gui.add(params, "Ellipse_Size", 0, 100, 1);
 gui.add(params, "Download_Image");
+var pos = 0;
+var div;
+var div2;
 function draw() {
-    background(0);
-    ellipse(mouseX, mouseY, params.Ellipse_Size);
+    fill('black');
+    div = line(200, 200, 400, 400);
+    translate(pos, 0, 0);
+    div2 = line(200, 200, 400, 400);
+    while (pos != 0) {
+        div.hide();
+    }
+}
+function mouseWheel(event) {
+    print(event.delta);
+    pos = event.delta;
 }
 function setup() {
     p6_CreateCanvas();
