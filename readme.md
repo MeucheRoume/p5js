@@ -7,7 +7,7 @@
 - **For** each mouse wheel do
     - **Translate** on x
 
-## Actual version of my code
+## Current version of my code
 - **Draw** 5 lines in the high and down part of the page
 - **For** each mouse wheel do
   - Random **translate** on x between 0 to 5
