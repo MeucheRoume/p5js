@@ -1,9 +1,7 @@
 var gui = new dat.GUI();
 var params = {
-    Ellipse_Size: 30,
     Download_Image: function () { return save(); },
 };
-gui.add(params, "Ellipse_Size", 0, 100, 1);
 gui.add(params, "Download_Image");
 var pos = 0;
 function draw() {
@@ -12,7 +10,8 @@ function draw() {
     fill('black');
     push();
     strokeWeight(5);
-    translate(pos / 2, 0, 0);
+    var r = random(5);
+    translate(pos / r, 0, 0);
     line(0, 0, 5 * width / 6, height / 5);
     line(width / 4, 0, width / 5, height / 2);
     line(5 * width / 6, height / 5, width, height / 8);

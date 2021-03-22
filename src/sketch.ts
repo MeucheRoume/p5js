@@ -4,10 +4,8 @@
 
 const gui = new dat.GUI()
 const params = {
-    Ellipse_Size: 30,
     Download_Image: () => save(),
 }
-gui.add(params, "Ellipse_Size", 0, 100, 1)
 gui.add(params, "Download_Image")
 
 // -------------------
@@ -37,7 +35,8 @@ function draw() {
     // }
     push();
         strokeWeight(5);
-        translate(pos/2, 0, 0);
+        let r = random(5);
+        translate(pos/r, 0, 0);
         // première partie
         line(0, 0, 5*width/6, height/5);
         line(width/4, 0, width/5, height/2);
